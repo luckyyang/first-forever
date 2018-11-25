@@ -5,9 +5,9 @@ const {
 } = require('./compiled.js')
 
 const transaction = require('./transaction')
-const myContract = new nervos.appchain.Contract(abi);
+const myContract = new nervos.base.Contract(abi);
 (async function () {
-  const current = await nervos.appchain.getBlockNumber()
+  const current = await nervos.base.getBlockNumber()
   transaction.validUntilBlock = current + 88
   const txRes = await myContract
     .deploy({
@@ -19,7 +19,6 @@ const myContract = new nervos.appchain.Contract(abi);
   const {
     contractAddress
   } = res
-  console.log('contractAddress', contractAddress)
-  await nervos.appchain.storeAbi(contractAddress, abi, transaction) // store abi on the chain
-  nervos.appchain.getAbi(contractAddress).then(console.log) // get abi from the chain
+  await nervos.base.storeAbi(contractAddress, abi, transaction) // store abi on the chain
+  nervos.base.getAbi(contractAddress).then(console.log) // get abi from the chain
 })()

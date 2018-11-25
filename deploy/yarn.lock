@@ -2,16 +2,16 @@
 # yarn lockfile v1
 
 
-"@nervos/chain@^0.19.0":
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/@nervos/chain/-/chain-0.19.0.tgz#2b90b5cc07d6fe1873d0a218b50a0e136ebb4a62"
+"@appchain/base@^0.20.2":
+  version "0.20.2"
+  resolved "https://registry.yarnpkg.com/@appchain/base/-/base-0.20.2.tgz#23f7dc8427d97df078421de9d52f2944fc02b8e4"
   dependencies:
-    "@nervos/signer" "^1.0.38"
+    "@appchain/signer" "^2.0.3"
     web3 "^1.0.0-beta.34"
 
-"@nervos/signer@^1.0.38":
-  version "1.0.38"
-  resolved "https://registry.yarnpkg.com/@nervos/signer/-/signer-1.0.38.tgz#1552d80d677a52e8c2de3f79499bcb73c88bb1a0"
+"@appchain/signer@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@appchain/signer/-/signer-2.0.3.tgz#146b5966a4e5e5b297abca508e7ab45ce1e7ad44"
   dependencies:
     ec "^0.0.1"
     elliptic "^6.4.0"
