@@ -20,5 +20,5 @@ const myContract = new nervos.base.Contract(abi);
     contractAddress
   } = res
   await nervos.base.storeAbi(contractAddress, abi, transaction) // store abi on the chain
-  nervos.base.getAbi(contractAddress).then(console.log) // get abi from the chain
+  nervos.base.getAbi(contractAddress, 'pending').then(console.log) // get abi from the chain
 })()
